@@ -57,13 +57,13 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <div>
-                                        <a href="#" onclick="getMail(0)">Borge Refsnes</a>
+                                        <a href="#" id="person1" onclick="getMail(0)"> </a>
                                     </div>
                                     <div>
-                                        <a href="#" onclick="getMail(1)">Jane Doa</a>
+                                        <a href="#" id="person2" onclick="getMail(1)"> </a>
                                     </div>
                                     <div>
-                                        <a href="#" onclick="getMail(2)">John Doe</a>
+                                        <a href="#" id="person3" onclick="getMail(2)"> </a>
 
                                     </div>
                                 </div>
@@ -85,19 +85,17 @@
             <article class="col-md-8">
                 <img id="pic"  alt="" width="50%">
                 <p>
-                    subject: <span id="subject">something</span>
+                    subject: <span id="subject"></span>
                 </p>
                 <p>
-                    From: <span id="from">someone</span>
+                    From: <span id="from"></span>
                 </p>
                 <div id="btns">
                     <a href="#"><i class="w3-margin-left fa fa-mail-reply"></i> Reply</a>
                     <a href="#"><i class="w3-margin-left fa fa-arrow-right"></i> Forward</a>
                 </div>
                 <p id="mailbody">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, ad neque. Id voluptas magnam
-                    dolore qui, quam vel nemo tempore possimus quasi eveniet commodi tenetur deserunt ex sint expedita
-                    hic.
+                    
                 </p>
             </article>
 
@@ -155,11 +153,19 @@
         ];
         const mailpic=document.getElementById("pic");
         const mailfrom=document.getElementById("from");
+        const person1=document.getElementById("person1");
+        const person2=document.getElementById("person2");
+        const person3=document.getElementById("person3");
         function getMail(i) {
             mailpic.src=mails[i].pic;
             mailfrom.innerHTML=mails[i].name;
             
         }
+        getMail(0);
+person1.innerHTML=mails[0].name;
+person2.innerHTML=mails[1].name;
+person3.innerHTML=mails[2].name;
+
     </script>
 
 </body>
